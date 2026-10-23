@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int tribonacci(int n) {
+        int a=0;
+        int b=1;
+        int c=1;
+        if(n==0)return 0;
+        for(int i=2;i<n;i++){
+            int t =c;
+            c=c+a+b;
+            a=b;
+            b=t;
+        }
+        return c;
+        
+    }
+};
